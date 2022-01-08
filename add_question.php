@@ -15,16 +15,16 @@
 										$school_year_query_row = mysqli_fetch_array($school_year_query);
 										$school_year = $school_year_query_row['school_year'];
 										?>
-										<li><a href="#"><b>My Class</b></a><span class="divider">/</span></li>
-										<li><a href="#">School Year: <?php echo $school_year_query_row['school_year']; ?></a><span class="divider">/</span></li>
-										<li><a href="#"><b>Quiz Question</b></a></li>
+										<li><a href="#"><b>Mi clase</b></a><span class="divider">/</span></li>
+										<li><a href="#">Año escolar: <?php echo $school_year_query_row['school_year']; ?></a><span class="divider">/</span></li>
+										<li><a href="#"><b>Pregunta de prueba</b></a></li>
 									</ul>
 						 <!-- end breadcrumb -->
                         <!-- block -->
                         <div id="block_bg" class="block">
                             <div class="navbar navbar-inner block-header">
                                 <div id="" class="muted pull-right">
-								<a href="quiz_question.php<?php echo '?id='.$get_id; ?>" class="btn btn-success"><i class="icon-arrow-left"></i> Back</a>
+								<a href="quiz_question.php<?php echo '?id='.$get_id; ?>" class="btn btn-success"><i class="icon-arrow-left"></i> atras</a>
 								</div>
                             </div>
                             <div class="block-content collapse in">
@@ -33,7 +33,7 @@
 								
 							    <form class="form-horizontal" method="post">
 								        <div class="control-group">
-											<label class="control-label" for="inputPassword">Question</label>
+											<label class="control-label" for="inputPassword">Pregunta</label>
 											<div class="controls">
 													<textarea name="question" id="ckeditor_full" required></textarea>
 											</div>
@@ -46,7 +46,7 @@
 											</div>
 										</div> -->
 										<div class="control-group">
-											<label class="control-label" for="inputEmail">Question Type:</label>
+											<label class="control-label" for="inputEmail">Tipo de pregunta</label>
 											<div class="controls">			
 												<select id="qtype" name="question_tpye" required>
 													<option value=""></option>

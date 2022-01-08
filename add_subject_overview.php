@@ -20,7 +20,7 @@
 					     <ul class="breadcrumb">
 							<li><a href="#"><?php echo $class_row['class_name']; ?></a> <span class="divider">/</span></li>
 							<li><a href="#"><?php echo $class_row['subject_code']; ?></a> <span class="divider">/</span></li>
-							<li><a href="#"><b>Subject Overview</b></a></li>
+							<li><a href="#"><b>Resumen del tema</b></a></li>
 						</ul>
 						 <!-- end breadcrumb -->
 					 
@@ -28,7 +28,7 @@
                         <div id="block_bg" class="block">
                             <div class="navbar navbar-inner block-header">
                                 <div id="" class="muted pull-right">
-								<a href="subject_overview.php<?php echo '?id='.$get_id; ?>" class="btn btn-success"><i class="icon-arrow-left"></i> Back</a>
+								<a href="subject_overview.php<?php echo '?id='.$get_id; ?>" class="btn btn-success"><i class="icon-arrow-left"></i> atrás</a>
 								</div>
                             </div>
                             <div class="block-content collapse in">
@@ -39,7 +39,7 @@
 										
 								
 										<div class="control-group">
-											<label class="control-label" for="inputPassword">Subject Overview Content:</label>
+											<label class="control-label" for="inputPassword">Contenido de la descripción general del tema:</label>
 											<div class="controls">
 													<textarea name="content" id="ckeditor_full"></textarea>
 											</div>
@@ -50,7 +50,7 @@
 										<div class="control-group">
 										<div class="controls">
 										
-										<button name="save" type="submit" class="btn btn-info"><i class="icon-save"></i> Save</button>
+										<button name="save" type="submit" class="btn btn-info"><i class="icon-save"></i> Guardar</button>
 										</div>
 										</div>
 										</form>

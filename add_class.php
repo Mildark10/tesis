@@ -1,13 +1,13 @@
 						<!-- block -->
                         <div class="block">
                             <div class="navbar navbar-inner block-header">
-                                <div id="" class="muted pull-left"><h4><i class="icon-plus-sign"></i> Add class</h4></div>
+                                <div id="" class="muted pull-left"><h4><i class="icon-plus-sign"></i> Agregar clase</h4></div>
                             </div>
                             <div class="block-content collapse in">
                                 <div class="span12">
 								<form method="post" id="add_class">
 										<div class="control-group">
-											<label>Class Name:</label>
+											<label>Nombre de la clase:</label>
                                           <div class="controls">
 											<input type="hidden" name="session_id" value="<?php echo $session_id; ?>">
                                             <select name="class_id"  class="" required>
@@ -51,7 +51,7 @@
                                         </div>
 											<div class="control-group">
                                           <div class="controls">
-												<button name="save" class="btn btn-success"><i class="icon-save"></i> Save</button>
+												<button name="save" class="btn btn-success"><i class="icon-save"></i>Guardar</button>
                                           </div>
                                         </div>
                                 </form>

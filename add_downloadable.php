@@ -14,8 +14,8 @@
 								$school_year_query_row = mysqli_fetch_array($school_year_query);
 								$school_year = $school_year_query_row['school_year'];
 								?>
-								<li><a href="#"><b>My Class</b></a><span class="divider">/</span></li>
-								<li><a href="#">School Year: <?php echo $school_year_query_row['school_year']; ?></a></li>
+								<li><a href="#"><b>Mi clase</b></a><span class="divider">/</span></li>
+								<li><a href="#">Año escolar: <?php echo $school_year_query_row['school_year']; ?></a></li>
 						</ul>
 						 <!-- end breadcrumb -->
 					 
@@ -30,7 +30,7 @@
                                 <div class="span4">
 										<form class="" id="add_downloadble" method="post" enctype="multipart/form-data" name="upload" >
                         <div class="control-group">
-                            <label class="control-label" for="inputEmail">File:</label>
+                            <label class="control-label" for="inputEmail">Archivo:</label>
                             <div class="controls">
 				
 									
@@ -43,13 +43,13 @@
                         <div class="control-group">
                       
                             <div class="controls">
-                                <input type="text" name="name" Placeholder="File Name"  class="input" required>
+                                <input type="text" name="name" Placeholder="Nombre del archivo"  class="input" required>
                             </div>
                         </div>
                         <div class="control-group">
                           
                             <div class="controls">
-                                <input type="text" name="desc" Placeholder="Description"  class="input" required>
+                                <input type="text" name="desc" Placeholder="Descripcion"  class="input" required>
                             </div>
                         </div>
                 

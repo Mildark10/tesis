@@ -14,9 +14,8 @@
 										$school_year_query_row = mysqli_fetch_array($school_year_query);
 										$school_year = $school_year_query_row['school_year'];
 										?>
-											<li><a href="#"><b>My Class</b></a><span class="divider">/</span></li>
-										<li><a href="#">School Year: <?php echo $school_year_query_row['school_year']; ?></a><span class="divider">/</span></li>
-										<li><a href="#"><b>Backpack</b></a></li>
+											<li><a href="#"><b>Mi calse</b></a><span class="divider">/</span></li>
+										<li><a href="#">Año escolar: <?php echo $school_year_query_row['school_year']; ?></a><span class="divider">/</span></li>
 									</ul>
 						 <!-- end breadcrumb -->
                         <!-- block -->
@@ -46,9 +45,9 @@
 										<thead>
 										        <tr>
 												<th></th>
-												<th>Date Upload</th>
-												<th>File Name</th>
-												<th>Description</th>
+												<th>Fecha  de carga</th>
+												<th>Nombre de la carpeta</th>
+												<th>Descripción</th>
 												<th></th>
 												</tr>
 										</thead>
@@ -72,7 +71,7 @@
 									</table>
 									</form>
 									<?php }else{ ?>
-									<div class="alert alert-info"><i class="icon-info-sign"></i> No Files Inside Your Backpack.</div>
+									<div class="alert alert-info"><i class="icon-info-sign"></i> No hay Archivos.</div>
 									<?php } ?>
                                 </div>
                             </div>

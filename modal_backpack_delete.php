@@ -2,11 +2,11 @@
 					<div id="backup_delete" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 					<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
-					<h3 id="myModalLabel">Delete File?</h3>
+					<h3 id="myModalLabel">eliminar archivo?</h3>
 					</div>
 					<div class="modal-body">
 					<div class="alert alert-danger">
-					<p>Are you sure you want to delete the file you check?.</p>
+					<p>¿Está seguro de que desea eliminar el archivo ?.</p>
 					</div>
 					</div>
 					<div class="modal-footer">

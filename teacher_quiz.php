@@ -14,9 +14,9 @@
 										$school_year_query_row = mysqli_fetch_array($school_year_query);
 										$school_year = $school_year_query_row['school_year'];
 										?>
-											<li><a href="#"><b>My Class</b></a><span class="divider">/</span></li>
-										<li><a href="#">School Year: <?php echo $school_year_query_row['school_year']; ?></a><span class="divider">/</span></li>
-										<li><a href="#"><b>Quiz</b></a></li>
+											<li><a href="#"><b>Mi clase</b></a><span class="divider">/</span></li>
+										<li><a href="#">Año escolar: <?php echo $school_year_query_row['school_year']; ?></a><span class="divider">/</span></li>
+										<li><a href="#"><b>Practica</b></a></li>
 									</ul>
 						 <!-- end breadcrumb -->
                         <!-- block -->
@@ -27,8 +27,8 @@
                             <div class="block-content collapse in">
                                 <div class="span12">
 									<div class="pull-right">
-									<a href="add_quiz.php" class="btn btn-info"><i class="icon-plus-sign"></i> Add Quiz</a>
-									<td width="30"><a href="add_quiz_to_class.php" class="btn btn-success"><i class="icon-plus-sign"></i> Add Quiz to Class</a></td>   
+									<a href="add_quiz.php" class="btn btn-info"><i class="icon-plus-sign"></i> Agregar Practica</a>
+									<td width="30"><a href="add_quiz_to_class.php" class="btn btn-success"><i class="icon-plus-sign"></i>Agregar Practica a la clase</a></td>   
 									</div>
 								
 									<form action="delete_quiz.php" method="post">
@@ -38,10 +38,10 @@
 										<thead>
 										        <tr>
 												<th></th>
-												<th>Quiz title</th>
-												<th>Description</th>
-												<th>Date Added</th>
-												<th>Questions</th>
+												<th>Nombre de la practica</th>
+												<th>Descripción</th>
+												<th>Fecha de asignación</th>
+												<th>Preguntas</th>
 												<th></th>
 												</tr>
 										</thead>
@@ -58,7 +58,7 @@
 										 <td><?php echo $row['quiz_title']; ?></td>
                                          <td><?php  echo $row['quiz_description']; ?></td>
                                          <td><?php echo $row['date_added']; ?></td>                                      
-                                         <td><a href="quiz_question.php<?php echo '?id='.$id; ?>">Questions</a></td>                                      
+                                         <td><a href="quiz_question.php<?php echo '?id='.$id; ?>">Preguntas</a></td>                                      
                                          <td width="30"><a href="edit_quiz.php<?php echo '?id='.$id; ?>" class="btn btn-success"><i class="icon-pencil"></i></a></td>                                                                         
 										</tr>
 									<?php } ?>

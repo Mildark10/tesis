@@ -14,9 +14,9 @@
 										$school_year_query_row = mysqli_fetch_array($school_year_query);
 										$school_year = $school_year_query_row['school_year'];
 										?>
-											<li><a href="#"><b>My Class</b></a><span class="divider">/</span></li>
-										<li><a href="#">School Year: <?php echo $school_year_query_row['school_year']; ?></a><span class="divider">/</span></li>
-										<li><a href="#"><b>Quiz</b></a></li>
+											<li><a href="#"><b>Mi clase</b></a><span class="divider">/</span></li>
+										<li><a href="#">Año escolar: <?php echo $school_year_query_row['school_year']; ?></a><span class="divider">/</span></li>
+										<li><a href="#"><b>Practica</b></a></li>
 									</ul>
 						 <!-- end breadcrumb -->
                         <!-- block -->
@@ -27,12 +27,12 @@
                             <div class="block-content collapse in">
                                 <div class="span12">
 									<div class="pull-right">
-									<a href="teacher_quiz.php" class="btn btn-info"><i class="icon-arrow-left"></i> Back</a>
+									<a href="teacher_quiz.php" class="btn btn-info"><i class="icon-arrow-left"></i> atras</a>
 									</div>
 								
 									    <form class="form-horizontal" method="post">
 										<div class="control-group">
-											<label class="control-label" for="inputEmail">Quiz</label>
+											<label class="control-label" for="inputEmail">Pregunta</label>
 											<div class="controls">
 											<select name="quiz_id">
 											<option></option>
@@ -44,9 +44,9 @@
 											</div>
 										</div>
 										<div class="control-group">
-											<label class="control-label" for="inputPassword">Test Time (in minutes)</label>
+											<label class="control-label" for="inputPassword">tiempo de la prueba (en minutos)</label>
 											<div class="controls">
-											<input type="text" class="span3" name="time" id="inputPassword" placeholder="Test Time" required>
+											<input type="text" class="span3" name="time" id="inputPassword" placeholder="Tiempo" required>
 											</div>
 										</div>
 		
@@ -83,7 +83,7 @@
 										<div class="control-group">
 										<div class="controls">
 										
-										<button name="save" type="submit" class="btn btn-info"><i class="icon-save"></i> Save</button>
+										<button name="save" type="submit" class="btn btn-info"><i class="icon-save"></i> Guardar</button>
 										</div>
 										</div>
 										</form>

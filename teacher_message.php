@@ -14,9 +14,9 @@
 								$school_year_query_row = mysqli_fetch_array($school_year_query);
 								$school_year = $school_year_query_row['school_year'];
 								?>
-								<li><a href="#">Message</a><span class="divider">/</span></li>
-								<li><a href="#"><b>Inbox</b></a><span class="divider">/</span></li>
-								<li><a href="#">School Year: <?php echo $school_year_query_row['school_year']; ?></a></li>
+								<li><a href="#">Mensaje</a><span class="divider">/</span></li>
+								<li><a href="#"><b>Bandeja de entrada</b></a><span class="divider">/</span></li>
+								<li><a href="#">Año escolar: <?php echo $school_year_query_row['school_year']; ?></a></li>
 						</ul>
 						 <!-- end breadcrumb -->
 					 
@@ -30,10 +30,10 @@
   								
 										<ul class="nav nav-pills">
 										<li class="active">
-										<a href="teacher_message.php"><i class="icon-envelope-alt"></i>inbox</a>
+										<a href="teacher_message.php"><i class="icon-envelope-alt"></i>Bandeja de entrada</a>
 										</li>
 										<li class="">
-										<a href="sent_message.php"><i class="icon-envelope-alt"></i>Sent messages</a>
+										<a href="sent_message.php"><i class="icon-envelope-alt"></i>Enviar mensaje</a>
 										</li>
 										</ul>
 										
@@ -60,17 +60,17 @@
 											Send by: <strong><?php echo $row['sender_name']; ?></strong>
 											<i class="icon-calendar"></i> <?php echo $row['date_sended']; ?>
 													<div class="pull-right">
-														<a class="btn btn-link"  href="#reply<?php echo $id; ?>" data-toggle="modal" ><i class="icon-reply"></i> Reply </a>
+														<a class="btn btn-link"  href="#reply<?php echo $id; ?>" data-toggle="modal" ><i class="icon-reply"></i> Reenviar </a>
 													</div>
 													<div class="pull-right">
-													<a class="btn btn-link"  href="#<?php echo $id; ?>" data-toggle="modal" ><i class="icon-remove"></i> Remove </a>
+													<a class="btn btn-link"  href="#<?php echo $id; ?>" data-toggle="modal" ><i class="icon-remove"></i> Remover </a>
 													<?php include("remove_inbox_message_modal.php"); ?>
 													<?php include("reply_inbox_message_modal.php"); ?>
 													</div>
 											</div>
 											
 								<?php }}else{ ?>
-								<div class="alert alert-info"><i class="icon-info-sign"></i> No Inbox  Messages</div>
+								<div class="alert alert-info"><i class="icon-info-sign"></i> No tiene mensajes en su bandeja de entrada</div>
 								<?php } ?>	
                                 </div>
                             </div>

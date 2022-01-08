@@ -10,7 +10,7 @@
                      <div class="row-fluid">
 					     <!-- breadcrumb -->
 				<div class="pull-right">
-							<a href="my_students.php<?php echo '?id='.$get_id; ?>" class="btn btn-info"><i class="icon-arrow-left"></i> Back</a>
+							<a href="my_students.php<?php echo '?id='.$get_id; ?>" class="btn btn-info"><i class="icon-arrow-left"></i> atrás</a>
 						</div>
 										<?php $class_query = mysqli_query($conn,"select * from teacher_class
 										LEFT JOIN class ON class.class_id = teacher_class.class_id
@@ -22,8 +22,8 @@
 					     <ul class="breadcrumb">
 							<li><a href="#"><?php echo $class_row['class_name']; ?></a> <span class="divider">/</span></li>
 							<li><a href="#"><?php echo $class_row['subject_code']; ?></a> <span class="divider">/</span></li>
-							<li><a href="#">My Students</a><span class="divider">/</span></li>
-							<li><a href="#"><b>Add Student</b></a></li>
+							<li><a href="#">Mis estudiantes</a><span class="divider">/</span></li>
+							<li><a href="#"><b>Agregar estudiantes</b></a></li>
 						</ul>
 						
 						 <!-- end breadcrumb -->
@@ -48,9 +48,9 @@
 		
                                 <tr>
                                
-                                    <th>Photo</th>
-                                    <th>Name</th>
-                                    <th>Course Year and Section</th>
+                                    <th>Foto</th>
+                                    <th>Nombre</th>
+                                    <th>curso de la sección</th>
                   
                                     <th></th>
                                 </tr>

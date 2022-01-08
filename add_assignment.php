@@ -14,8 +14,8 @@
 								$school_year_query_row = mysqli_fetch_array($school_year_query);
 								$school_year = $school_year_query_row['school_year'];
 								?>
-								<li><a href="#"><b>My Class</b></a><span class="divider">/</span></li>
-								<li><a href="#">School Year: <?php echo $school_year_query_row['school_year']; ?></a></li>
+								<li><a href="#"><b>Mi clase</b></a><span class="divider">/</span></li>
+								<li><a href="#">Año escolar: <?php echo $school_year_query_row['school_year']; ?></a></li>
 						</ul>
 						 <!-- end breadcrumb -->
                         <!-- block -->
@@ -75,7 +75,7 @@
 									</div>
 									<div class="span8">
 											
-			<div class="alert alert-info">Check The Class you want to put this file.</div>
+			<div class="alert alert-info">Marque la clase en la que desea poner este archivo.</div>
 					
 									<div class="pull-left">
 							Check All <input type="checkbox"  name="selectAll" id="checkAll" />
@@ -90,8 +90,8 @@
 										<thead>
 										        <tr>
 												<th></th>
-												<th>Class Name</th>
-												<th>Subject Code</th>
+												<th>Nombre de la clase</th>
+												<th>Código de asunto</th>
 												</tr>
 												
 										</thead>
@@ -130,7 +130,7 @@
 									<center>
 									<div class="control-group">
 												<div class="controls">
-													<button name="Upload" type="submit" value="Upload" class="btn btn-success" /><i class="icon-upload-alt"></i>&nbsp;Upload</button>
+													<button name="Upload" type="submit" value="Upload" class="btn btn-success" /><i class="icon-upload-alt"></i>&nbsp;Subir</button>
 												</div>
 									</div>
 									</center>

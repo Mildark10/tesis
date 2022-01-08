@@ -14,9 +14,9 @@
 										$school_year_query_row = mysqli_fetch_array($school_year_query);
 										$school_year = $school_year_query_row['school_year'];
 										?>
-											<li><a href="#"><b>My Class</b></a><span class="divider">/</span></li>
-										<li><a href="#">School Year: <?php echo $school_year_query_row['school_year']; ?></a><span class="divider">/</span></li>
-										<li><a href="#"><b>Shared Files</b></a></li>
+											<li><a href="#"><b>Mi clase</b></a><span class="divider">/</span></li>
+										<li><a href="#">Año escolar: <?php echo $school_year_query_row['school_year']; ?></a><span class="divider">/</span></li>
+										<li><a href="#"><b>Archivo compartidos</b></a></li>
 									</ul>
 						 <!-- end breadcrumb -->
                         <!-- block -->
@@ -41,10 +41,10 @@
 										<thead>
 										        <tr>
 												<th></th>
-												<th>Date Upload</th>
-												<th>File Name</th>
-												<th>Description</th>
-												<th>Shared By</th>
+												<th>Fecha de carga</th>
+												<th>Nombre del archivo</th>
+												<th>Descriptcion</th>
+												<th>Compartido por</th>
 												<th></th>
 												</tr>
 										</thead>
