@@ -9,7 +9,7 @@ $errflag = false;
 $conn = $connector->DbConnector();
 // var_dump($conn);
 // exit;       
-$uploaded_by_query = mysqli_query($conn,"select * from teacher where teacher_id = '$session_id'")or die(mysqli_error());
+$uploaded_by_query = mysqli_query($conn,"select * from teacher where teacher_id = '$session_id'")or die(mysqli_error($conn));
 $uploaded_by_query_row = mysqli_fetch_array($uploaded_by_query);
 $uploaded_by = $uploaded_by_query_row['firstname']."".$uploaded_by_query_row['lastname'];
 
@@ -86,7 +86,7 @@ if ((!empty($_FILES["uploaded_file"])) && ($_FILES['uploaded_file']['error'] == 
                // echo "INSERT INTO files (fdesc,floc,fdatein,teacher_id,class_id,fname,uploaded_by) VALUES ('$filedesc','$newname',NOW(),'$session_id','$id[$i]','$name','$uploaded_by')";
                 // exit;
 				mysqli_query($conn,"INSERT INTO files (fdesc,floc,fdatein,teacher_id,class_id,fname,uploaded_by) VALUES ('$filedesc','$newname',NOW(),'$session_id','$id[$i]','$name','$uploaded_by')");
-				mysqli_query($conn,"insert into notification (teacher_class_id,notification,date_of_notification,link) value('$id[$i]','$name_notification',NOW(),'downloadable_student.php')")or die(mysqli_error());
+				mysqli_query($conn,"insert into notification (teacher_class_id,notification,date_of_notification,link) value('$id[$i]','$name_notification',NOW(),'downloadable_student.php')")or die(mysqli_error($conn));
 			   
 			  }
 			   

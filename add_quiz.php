@@ -10,7 +10,7 @@
 					    <!-- breadcrumb -->	
 									<ul class="breadcrumb">
 										<?php
-										$school_year_query = mysqli_query($conn,"select * from school_year order by school_year DESC")or die(mysqli_error());
+										$school_year_query = mysqli_query($conn,"select * from school_year order by school_year DESC")or die(mysqli_error($conn));
 										$school_year_query_row = mysqli_fetch_array($school_year_query);
 										$school_year = $school_year_query_row['school_year'];
 										?>
@@ -53,7 +53,7 @@
 										if (isset($_POST['save'])){
 										$quiz_title = $_POST['quiz_title'];
 										$description = $_POST['description'];
-										mysqli_query($conn,"insert into quiz (quiz_title,quiz_description,date_added,teacher_id) values('$quiz_title','$description',NOW(),'$session_id')")or die(mysqli_error());
+										mysqli_query($conn,"insert into quiz (quiz_title,quiz_description,date_added,teacher_id) values('$quiz_title','$description',NOW(),'$session_id')")or die(mysqli_error($conn));
 										?>
 										<script>
 										window.location = 'teacher_quiz.php';

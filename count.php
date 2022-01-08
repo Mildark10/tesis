@@ -1,5 +1,5 @@
 					<?php
-						$school_year_query = mysqli_query($conn,"select * from school_year order by school_year DESC")or die(mysqli_error());
+						$school_year_query = mysqli_query($conn,"select * from school_year order by school_year DESC")or die(mysqli_error($conn));
 						$school_year_query_row = mysqli_fetch_array($school_year_query);
 						$school_year = $school_year_query_row['school_year'];
 						?>
@@ -11,7 +11,7 @@
 					LEFT JOIN teacher ON teacher.teacher_id = teacher_class_student.teacher_id 
 					JOIN notification ON notification.teacher_class_id = teacher_class.teacher_class_id 
 					where teacher_class_student.student_id = '$session_id' and school_year = '$school_year'   order by notification.date_of_notification DESC
-					")or die(mysqli_error());
+					")or die(mysqli_error($conn));
 					$count_no = mysqli_num_rows($query_yes);
 
 		
@@ -19,7 +19,7 @@
 					<?php $query_no = mysqli_query($conn,"select * from notification 
 					LEFT JOIN notification_read ON notification_read.notification_id = notification.notification_id
 					where notification_read.student_id  = '$session_id'
-					")or die(mysqli_error());
+					")or die(mysqli_error($conn));
 					$count_yes = mysqli_num_rows($query_no);
 					
 		            ?>

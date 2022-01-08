@@ -12,7 +12,7 @@
 									
 					     <ul class="breadcrumb">
 						<?php
-						$school_year_query = mysqli_query($conn,"select * from school_year order by school_year DESC")or die(mysqli_error());
+						$school_year_query = mysqli_query($conn,"select * from school_year order by school_year DESC")or die(mysqli_error($conn));
 						$school_year_query_row = mysqli_fetch_array($school_year_query);
 						$school_year = $school_year_query_row['school_year'];
 						?>
@@ -33,7 +33,7 @@
 														LEFT JOIN subject ON subject.subject_id = teacher_class.subject_id
 														LEFT JOIN teacher ON teacher.teacher_id = teacher_class.teacher_id
 														where student_id = '$session_id' and school_year = '$school_year'
-														")or die(mysqli_error());
+														")or die(mysqli_error($conn));
 														$count = mysqli_num_rows($query);
 									?>
 												<span class="badge badge-info"><?php echo $count; ?></span>

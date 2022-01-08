@@ -7,7 +7,7 @@ $id=$_POST['selector'];
 $N = count($id);
 for($i=0; $i < $N; $i++)
 {
-	$result = mysqli_query($conn,"select * from files  where file_id = '$id[$i]' ")or die(mysqli_error());
+	$result = mysqli_query($conn,"select * from files  where file_id = '$id[$i]' ")or die(mysqli_error($conn));
 	while($row = mysqli_fetch_array($result)){
 	
 	$fname = $row['fname'];
@@ -16,7 +16,7 @@ for($i=0; $i < $N; $i++)
 	$teacher_id = $row['teacher_id'];
 	
 	
-	mysqli_query($conn,"insert into student_backpack (floc,fdatein,fdesc,student_id,fname) value('$floc',NOW(),'$fdesc','$session_id','$fname')")or die(mysqli_error());
+	mysqli_query($conn,"insert into student_backpack (floc,fdatein,fdesc,student_id,fname) value('$floc',NOW(),'$fdesc','$session_id','$fname')")or die(mysqli_error($conn));
 	
 	
 	}

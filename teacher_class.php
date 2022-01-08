@@ -4,7 +4,7 @@
 										<?php $query = mysqli_query($conn,"select * from teacher_class
 										LEFT JOIN class ON class.class_id = teacher_class.class_id
 										LEFT JOIN subject ON subject.subject_id = teacher_class.subject_id
-										where teacher_id = '$session_id' and school_year = '$school_year' ")or die(mysqli_error());
+										where teacher_id = '$session_id' and school_year = '$school_year' ")or die(mysqli_error($conn));
 										$count = mysqli_num_rows($query);
 										
 										if ($count > 0){
@@ -21,11 +21,11 @@
 												</a>
 												<p class="class"><?php echo $row['class_name']; ?></p>
 												<p class="subject"><?php echo $row['subject_code']; ?></p>
-												<a href="#<?php echo $id; ?>" data-toggle="modal"><i class="icon-trash"></i> Remove</a>	
+												<a href="#<?php echo $id; ?>" data-toggle="modal"><i class="icon-trash"></i> Remover</a>	
 											
 											</li>
 										<?php include("delete_class_modal.php"); ?>
 									<?php } }else{ ?>
-									<div class="alert alert-info"><i class="icon-info-sign"></i> No Class Currently Added</div>
+									<div class="alert alert-info"><i class="icon-info-sign"></i> Ninguna clase agregada actualmente</div>
 									<?php  } ?>
 									</ul>

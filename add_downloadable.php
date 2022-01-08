@@ -10,7 +10,7 @@
 					    <!-- breadcrumb -->	
 					     <ul class="breadcrumb">
 								<?php
-								$school_year_query = mysqli_query($conn,"select * from school_year order by school_year DESC")or die(mysqli_error());
+								$school_year_query = mysqli_query($conn,"select * from school_year order by school_year DESC")or die(mysqli_error($conn));
 								$school_year_query_row = mysqli_fetch_array($school_year_query);
 								$school_year = $school_year_query_row['school_year'];
 								?>
@@ -110,7 +110,7 @@
                               	<?php $query = mysqli_query($conn,"select * from teacher_class
 										LEFT JOIN class ON class.class_id = teacher_class.class_id
 										LEFT JOIN subject ON subject.subject_id = teacher_class.subject_id
-										where teacher_id = '$session_id' and school_year = '$school_year' ")or die(mysqli_error());
+										where teacher_id = '$session_id' and school_year = '$school_year' ")or die(mysqli_error($conn));
 										$count = mysqli_num_rows($query);
 										
 									
@@ -154,7 +154,6 @@
 			
 
                 </div>
-							<?php/*  include('teacher_right_sidebar.php')  */?>
 	
             </div>
 		<?php include('footer.php'); ?>

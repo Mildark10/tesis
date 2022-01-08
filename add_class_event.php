@@ -11,7 +11,7 @@ if (isset($_POST['add'])){
 	$date_end = $_POST['date_end'];
 	$title = $_POST['title'];
 	
-	$query = mysqli_query($conn,"insert into event (date_end,date_start,event_title,teacher_class_id) values('$date_end','$date_start','$title','$get_id')")or die(mysqli_error());
+	$query = mysqli_query($conn,"insert into event (date_end,date_start,event_title,teacher_class_id) values('$date_end','$date_start','$title','$get_id')")or die(mysqli_error($conn));
 	?>
 	<script>
 	window.location = "class_calendar.php<?php echo '?id='.$get_id; ?>";
@@ -35,7 +35,7 @@ if (isset($_POST['add'])){
 										<tbody>
 											
                              
-									<?php $event_query = mysqli_query($conn,"select * from event where teacher_class_id = '$get_id' ")or die(mysqli_error());
+									<?php $event_query = mysqli_query($conn,"select * from event where teacher_class_id = '$get_id' ")or die(mysqli_error($conn));
 										while($event_row = mysqli_fetch_array($event_query)){
 										$id  = $event_row['event_id'];
 									?>                              

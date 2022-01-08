@@ -10,7 +10,7 @@
 					    <!-- breadcrumb -->	
 					     <ul class="breadcrumb">
 								<?php
-								$school_year_query = mysqli_query($conn,"select * from school_year order by school_year DESC")or die(mysqli_error());
+								$school_year_query = mysqli_query($conn,"select * from school_year order by school_year DESC")or die(mysqli_error($conn));
 								$school_year_query_row = mysqli_fetch_array($school_year_query);
 								$school_year = $school_year_query_row['school_year'];
 								?>
@@ -28,7 +28,7 @@
                                 <div class="span12">
   								<div class="alert alert-info"><i class="icon-info-sign"></i> Please Fill in required details</div>
 								<?php
-								$query = mysqli_query($conn,"select * from student where student_id = '$session_id'")or die(mysqli_error());
+								$query = mysqli_query($conn,"select * from student where student_id = '$session_id'")or die(mysqli_error($conn));
 								$row = mysqli_fetch_array($query);
 								?>								
 										

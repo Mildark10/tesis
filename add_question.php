@@ -11,7 +11,7 @@
 					    <!-- breadcrumb -->	
 									<ul class="breadcrumb">
 										<?php
-										$school_year_query = mysqli_query($conn,"select * from school_year order by school_year DESC")or die(mysqli_error());
+										$school_year_query = mysqli_query($conn,"select * from school_year order by school_year DESC")or die(mysqli_error($conn));
 										$school_year_query_row = mysqli_fetch_array($school_year_query);
 										$school_year = $school_year_query_row['school_year'];
 										?>
@@ -51,7 +51,7 @@
 												<select id="qtype" name="question_tpye" required>
 													<option value=""></option>
 													<?php
-													$query_question = mysqli_query($conn,"select * from question_type")or die(mysqli_error());
+													$query_question = mysqli_query($conn,"select * from question_type")or die(mysqli_error($conn));
 													while($query_question_row = mysqli_fetch_array($query_question)){
 													?>
 													<option value="<?php echo $query_question_row['question_type_id']; ?>"><?php echo $query_question_row['question_type'];  ?></option>
@@ -102,19 +102,19 @@
 		
 		if ($type  == '2'){
 				mysqli_query($conn,"insert into quiz_question (quiz_id,question_text,date_added,answer,question_type_id) 
-			values('$get_id','$question',NOW(),'".$_POST['correctt']."','$type')")or die(mysqli_error());
+			values('$get_id','$question',NOW(),'".$_POST['correctt']."','$type')")or die(mysqli_error($conn));
 		}else{
 	
 		mysqli_query($conn,"insert into quiz_question (quiz_id,question_text,date_added,answer,question_type_id) 
-		values('$get_id','$question',NOW(),'$answer','$type')")or die(mysqli_error());
-		$query = mysqli_query($conn,"select * from quiz_question order by quiz_question_id DESC LIMIT 1")or die(mysqli_error());
+		values('$get_id','$question',NOW(),'$answer','$type')")or die(mysqli_error($conn));
+		$query = mysqli_query($conn,"select * from quiz_question order by quiz_question_id DESC LIMIT 1")or die(mysqli_error($conn));
 		$row = mysqli_fetch_array($query);
 		$quiz_question_id = $row['quiz_question_id'];
 		
-		mysqli_query($conn,"insert into answer (quiz_question_id,answer_text,choices) values('$quiz_question_id','$ans1','A')")or die(mysqli_error());
-		mysqli_query($conn,"insert into answer (quiz_question_id,answer_text,choices) values('$quiz_question_id','$ans2','B')")or die(mysqli_error());
-		mysqli_query($conn,"insert into answer (quiz_question_id,answer_text,choices) values('$quiz_question_id','$ans3','C')")or die(mysqli_error());
-		mysqli_query($conn,"insert into answer (quiz_question_id,answer_text,choices) values('$quiz_question_id','$ans4','D')")or die(mysqli_error());
+		mysqli_query($conn,"insert into answer (quiz_question_id,answer_text,choices) values('$quiz_question_id','$ans1','A')")or die(mysqli_error($conn));
+		mysqli_query($conn,"insert into answer (quiz_question_id,answer_text,choices) values('$quiz_question_id','$ans2','B')")or die(mysqli_error($conn));
+		mysqli_query($conn,"insert into answer (quiz_question_id,answer_text,choices) values('$quiz_question_id','$ans3','C')")or die(mysqli_error($conn));
+		mysqli_query($conn,"insert into answer (quiz_question_id,answer_text,choices) values('$quiz_question_id','$ans4','D')")or die(mysqli_error($conn));
 		
 		}
 		

@@ -10,7 +10,7 @@
 					    <!-- breadcrumb -->	
 									<ul class="breadcrumb">
 										<?php
-										$school_year_query = mysqli_query($conn,"select * from school_year order by school_year DESC")or die(mysqli_error());
+										$school_year_query = mysqli_query($conn,"select * from school_year order by school_year DESC")or die(mysqli_error($conn));
 										$school_year_query_row = mysqli_fetch_array($school_year_query);
 										$school_year = $school_year_query_row['school_year'];
 										?>
@@ -35,7 +35,7 @@
 								</script>					
 							</div>
 								<?php
-								$query_backpack = mysqli_query($conn,"select * FROM student_backpack where student_id = '$session_id'  order by fdatein DESC ")or die(mysqli_error());
+								$query_backpack = mysqli_query($conn,"select * FROM student_backpack where student_id = '$session_id'  order by fdatein DESC ")or die(mysqli_error($conn));
 								$num_row = mysqli_num_rows($query_backpack);
 								if ($num_row > 0){
 								?>
@@ -54,7 +54,7 @@
 										</thead>
 										<tbody>
                               		<?php
-										$query = mysqli_query($conn,"select * FROM student_backpack where student_id = '$session_id'  order by fdatein DESC ")or die(mysqli_error());
+										$query = mysqli_query($conn,"select * FROM student_backpack where student_id = '$session_id'  order by fdatein DESC ")or die(mysqli_error($conn));
 										while($row = mysqli_fetch_array($query)){
 										$id  = $row['file_id'];
 									?>                              

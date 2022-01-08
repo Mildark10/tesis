@@ -8,7 +8,7 @@ $class_id = $_POST['teacher_class_id'];
 $N = count($id);
 for($i=0; $i < $N; $i++)
 {
-	$result = mysqli_query($conn,"select * from files  where file_id = '$id[$i]' ")or die(mysqli_error());
+	$result = mysqli_query($conn,"select * from files  where file_id = '$id[$i]' ")or die(mysqli_error($conn));
 	while($row = mysqli_fetch_array($result)){
 	
 	$fname = $row['fname'];
@@ -18,7 +18,7 @@ for($i=0; $i < $N; $i++)
 
 	
 	
-	mysqli_query($conn,"insert into files (floc,fdatein,fdesc,class_id,fname,uploaded_by) value('$floc',NOW(),'$fdesc','$class_id','$fname','$uploaded_by')")or die(mysqli_error());
+	mysqli_query($conn,"insert into files (floc,fdatein,fdesc,class_id,fname,uploaded_by) value('$floc',NOW(),'$fdesc','$class_id','$fname','$uploaded_by')")or die(mysqli_error($conn));
 	
 	
 	}
@@ -36,7 +36,7 @@ $id=$_POST['selector'];
 $N = count($id);
 for($i=0; $i < $N; $i++)
 {
-	$result = mysqli_query($conn,"select * from files  where file_id = '$id[$i]' ")or die(mysqli_error());
+	$result = mysqli_query($conn,"select * from files  where file_id = '$id[$i]' ")or die(mysqli_error($conn));
 	while($row = mysqli_fetch_array($result)){
 	
 
@@ -45,7 +45,7 @@ for($i=0; $i < $N; $i++)
 	$fdesc = $row['fdesc'];
 
 	
-	mysqli_query($conn,"insert into teacher_backpack (floc,fdatein,fdesc,teacher_id,fname) value('$floc',NOW(),'$fdesc','$session_id','$fname')")or die(mysqli_error());
+	mysqli_query($conn,"insert into teacher_backpack (floc,fdatein,fdesc,teacher_id,fname) value('$floc',NOW(),'$fdesc','$session_id','$fname')")or die(mysqli_error($conn));
 	
 	
 	}
@@ -66,7 +66,7 @@ echo $teacher_id ;
 $N = count($id);
 for($i=0; $i < $N; $i++)
 {
-	$result = mysqli_query($conn,"select * from files  where file_id = '$id[$i]' ")or die(mysqli_error());
+	$result = mysqli_query($conn,"select * from files  where file_id = '$id[$i]' ")or die(mysqli_error($conn));
 	while($row = mysqli_fetch_array($result)){
 	
 
@@ -75,7 +75,7 @@ for($i=0; $i < $N; $i++)
 	$fdesc = $row['fdesc'];
 
 	
-	mysqli_query($conn,"insert into teacher_shared (floc,fdatein,fdesc,teacher_id,fname,shared_teacher_id) value('$floc',NOW(),'$fdesc','$session_id','$fname','$teacher_id')")or die(mysqli_error());
+	mysqli_query($conn,"insert into teacher_shared (floc,fdatein,fdesc,teacher_id,fname,shared_teacher_id) value('$floc',NOW(),'$fdesc','$session_id','$fname','$teacher_id')")or die(mysqli_error($conn));
 	
 	
 	}
